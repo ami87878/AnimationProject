@@ -1,0 +1,29 @@
+.feature-box {
+
+
+    background-color: rgba($color: $color-white, $alpha: 0.8);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0rem 1rem 4rem rgba($color: $color-black, $alpha: 0.4);
+    transition: all 0.5s;
+
+
+    &:hover {
+
+        transform: scale(1.06) translateY(-2rem);
+
+
+
+    }
+
+    &__icon {
+
+        font-size: 6rem;
+        margin-bottom: 0.5rem;
+        @include gradiantcolor ($color-secondary, $color-secondary-darken)
+    }
+
+
+}

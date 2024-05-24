@@ -1,0 +1,60 @@
+.header {
+
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    background-image:
+        linear-gradient(to right bottom,
+            rgba($color-secondary, 0.4),
+            rgba($color-secondary-darken, 0.4)),
+        url('../../../img/hero.jpg');
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        background-size: cover;
+    height: 95vh;
+    background-position: top;
+
+    position: relative;
+
+
+    &__logo-box {
+
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+
+    }
+
+
+    &__logo {
+
+        height: 3.5rem;
+        animation: scrow;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        /* 
+        animation-delay: 0.5s; 
+        animation-iteration-count: infinite;
+        animation: scrow;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        */
+    }
+
+    &__logo:hover {
+
+        animation: scrow;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        cursor: pointer;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+}
