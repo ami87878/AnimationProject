@@ -61,6 +61,16 @@
 
         }
     }
+    &--green {
+
+        color: $color-white;
+        background-color: $color-primary-darken;
+
+        &::after {
+            background-color: $color-primary-darken;
+
+        }
+    }
 
     &--animated {
 
