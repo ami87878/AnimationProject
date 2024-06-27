@@ -21,3 +21,72 @@
     color: transparent;
 
 }
+
+@mixin centerposition() {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+//media query manager
+/*
+0-600px mobile
+600-900px tablet portrait
+900-1200px tablet landscape
+1200-1800px we wrote our css before
+1800px to infinity large desktop
+
+ */
+
+// mobile
+// tab-port
+// tab-land
+// bg-desktop
+
+//order base-typography >general layout +grid> Page layout >components
+
+@mixin response($breakepoint) {
+
+    @if $breakepoint==mobile {
+        //600px
+
+        @media only screen and (max-width:37.5em) {
+            @content
+        }
+    }
+
+    ;
+
+    @if $breakepoint==tab-port {
+
+        //900px
+        @media only screen and (max-width:56.25em) {
+            @content
+        }
+    }
+
+    ;
+
+    @if $breakepoint==tab-land {
+
+        //1200px
+        @media only screen and (max-width:75em) {
+            @content
+        }
+    }
+
+    ;
+
+    @if $breakepoint==bg-desktop {
+        //1800px
+
+        @media only screen and (min-width:112.5em) {
+            @content
+        }
+    }
+
+
+}

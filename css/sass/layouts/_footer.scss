@@ -1,0 +1,102 @@
+.footer {
+
+    background-color: $color-gray-dark-2;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+
+    @include response(tab-port){
+
+        padding: 8rem 0;
+    }
+    
+    
+    &__logo-box {
+        
+        text-align: center;
+        margin-bottom: 8rem;
+        
+        @include response(tab-port){
+    
+            margin-bottom: 4rem;
+        }
+
+    }
+
+    &__logo {
+
+        width: 15rem;
+        height: auto;
+
+
+    }
+
+    &__nav {
+        border-top: 1px solid $color-gray-light-1;
+        padding-top: 2rem;
+        display: inline-block;
+
+        @include response(tab-port){
+            width: 100%;
+            text-align: center;
+            
+        }
+    }
+
+    &__list {
+
+        list-style: none;
+
+    }
+
+    &__item {
+
+        display: inline-block;
+
+        &:not(:last-child) {
+
+            margin-right: 2rem;
+        }
+    }
+
+    &__link {
+
+        &,
+        &:link,
+        &:visited {
+            background-color: $color-gray-dark-2;
+            text-decoration: none;
+            font-size: 1.7rem;
+            color: $color-gray-light-1;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        &:hover,
+        &:active {
+
+            color: $color-coustom-light;
+            cursor: pointer;
+            transform: scale(1.1) rotate(3deg);
+            z-index: 3;
+            box-shadow: 0 1rem 3rem $color-black;
+
+        }
+    }
+
+    &__p {
+
+        color: $color-gray-dark;
+        font-size: $default-font-size;
+        border-top: 1px solid $color-gray-light-1;
+        padding-top: 2rem;
+        display: inline-block;
+        @include response(tab-port){
+            width: 100%;
+          float:none ;
+            
+        }
+
+
+    }
+}

@@ -10,13 +10,37 @@
 
 html {
 
-    font-size: 62.5%; // (10px/16px)*100
+    font-size: 62.5%; // (10px/16px)*100 1rem =10px
+    //desktop first big to small   // mobile first small to big media query should work
+   @include response(bg-desktop){
+    font-size:75% ;
+   }
+   @include response(tab-land){
+    font-size:56.25% ;
+   }
+   @include response(tab-port){
+    font-size:50% ;
+   }
+   @include response(mobile){
+    font-size:40% ;
+   }
 }
 
 
 body {
 
     box-sizing: border-box;
+    padding: 2rem;
+
+    @include response(tab-port){
+        padding: 0rem;
+       }
   
 
+}
+
+::selection{
+
+    background-color: $color-secondary-darken;
+    color: $color-white;
 }

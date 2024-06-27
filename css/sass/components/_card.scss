@@ -176,4 +176,65 @@
         font-weight: 100;
 
     }
+
+    @include response(tab-port) {
+
+
+        height: auto;
+        border-radius: 0.5rem;
+        background-color: $color-white;
+        box-shadow: 0rem 1rem 2rem rgba($color: $color-black, $alpha: 0.4);
+
+        &__side {
+            width: auto;
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+
+
+            &--back {
+                transform: rotateY(0deg);
+                -webkit-clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 0% 100%);
+            
+            }
+
+            ;
+        }
+
+        &:hover &__side--front {
+
+            transform: rotateY(0deg);
+        }
+
+
+
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            width: 100%;
+            padding: 8rem 4rem 4rem 4rem;
+            height: auto;
+        }
+
+        &__price-box {
+
+          
+            margin-bottom: 2rem;
+        }
+
+      
+
+        &__price-value {
+
+            font-size: 6rem;
+            color: $color-white;
+
+        }
+
+    }
+
 }

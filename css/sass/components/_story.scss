@@ -3,13 +3,28 @@
     width: 80%;
     margin: 0 auto;
     box-shadow: 1rem 3rem 6rem rgba($color: $color-black, $alpha: .4);
-    background-color: rgba($color-white,0.6);
+    background-color: rgba($color-white, 0.6);
     border-radius: 0.3rem;
     padding: 6rem;
     font-size: $default-font-size;
     padding-left: 8rem;
     transform: skewX(-12deg);
     
+    @include response(tab-port){
+        width: 100%;
+        padding: 5rem;
+        
+
+    }
+
+    @include response(mobile){
+        
+        transform: skewX(0deg);
+
+       
+
+    }
+
     &>* {
 
 
@@ -30,7 +45,10 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         transform: translate(-2rem, 0rem) skewX(12deg);
         position: relative;
-        
+        @include response (mobile){
+            transform: translate(-2rem, 0rem)skewX(0);
+        }
+
     }
 
     &__img {
@@ -38,37 +56,41 @@
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
         transition: all 0.6s;
-        
-    }
-    
-    &__text {
-        
+
     }
 
-    &__caption{
-    
+    &__text {
+
+        @include response (mobile){
+            transform: skewX(0);
+            margin: 1rem;
+        }
+    }
+
+    &__caption {
+
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,20%);
+        transform: translate(-50%, 20%);
         color: $color-white;
         text-transform: uppercase;
         font-size: 1.7rem;
         text-align: center;
         font-weight: 600;
         opacity: 0;
-        transition: all 0.6s ;
+        transition: all 0.6s;
         backface-visibility: hidden;
-        
+
     }
 
-    &:hover &__caption{
+    &:hover &__caption {
 
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         opacity: 1;
     }
-    
-    &:hover &__img{
+
+    &:hover &__img {
 
         transform: translateX(-4rem) scale(1);
         filter: blur(3px) brightness(80%);

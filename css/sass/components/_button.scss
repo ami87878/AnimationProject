@@ -1,5 +1,6 @@
 .btn {
 
+    &,
     &:visited,
     &:link {
 
@@ -11,6 +12,8 @@
         display: inline-block;
         transition: all 0.2s;
         position: relative;
+        border: none;
+        cursor: pointer;
     }
 
     /* box-shadow x direction  y direction  blur   color and opacity */
@@ -45,8 +48,10 @@
 
 
     /* when click  less shadow and vlue blur decreaase base experience*/
-    &:active {
+    &:active,
+    &:focus {
 
+        outline: none;
         transform: translateY(0);
         box-shadow: 0 0.5rem 0.2rem rgba($color-black, 0.2);
     }
@@ -61,6 +66,7 @@
 
         }
     }
+
     &--green {
 
         color: $color-white;
@@ -99,11 +105,11 @@
 
     }
 
-    ;
+
 
     &:hover {
         background-color: $color-secondary-middel;
-        color: $color-white;    
+        color: $color-white;
         box-shadow: 0rem 1rem 2rem rgba($color: $color-black, $alpha: 0.2);
         transform: translateY(-2px);
         border-radius: 0.3rem;

@@ -1,16 +1,22 @@
 .row {
 
     max-width: $grid-width;
-
     margin: 0 auto;
     @include clearfix;
-
     &:not(:last-child) {
-
         // every thing except last child
         margin-bottom: $gutter-vertical;
+    }
 
+    @include response(tab-port) {
 
+        margin-bottom: $gutter-vertical-sm;
+    }
+
+    @include response(tab-port) {
+
+        max-width: 50rem;
+        padding: 0 3rem ;
     }
 
     [class^='col-'] {
@@ -19,16 +25,20 @@
 
         float: left;
 
-
-
         &:not(:last-child) {
 
             margin-right: $gutter-horizontal;
 
-
+            @include response(tab-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-sm;
+            }
         }
 
+        @include response(tab-port) {
 
+            width: 100% !important;
+        }
 
     }
 
@@ -37,7 +47,7 @@
         width: calc((100% - #{$gutter-horizontal}) /2);
 
 
-    }    
+    }
 
     .col-1-of-3 {
 
